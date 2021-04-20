@@ -1,0 +1,25 @@
+<div *ngIf="!isLoggedIn">
+  <img class="background-image" src="assets/Apollo_Telehealth.png">
+</div>
+<div *ngIf="isLoggedIn">
+  <h4> Welcome {{doctorDetails.name}}</h4>
+  <div class="patient-table">
+    <table class="table table-bordered text-center table m-0">
+      <thead>
+        <tr>
+          <th rowspan="1" colspan="1">Patient name</th>
+          <th rowspan="1" colspan="1">Time Slot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of patientList">
+          <td>{{patient.patientName}}</td>
+          <td>{{patient.time}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="logout">
+    <button type="button" class="btn btn-secondary" (click)="logOutDoctor()">Logout</button>
+  </div>
+</div>

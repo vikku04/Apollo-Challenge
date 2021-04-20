@@ -1,0 +1,19 @@
+<!-- <div class="modal-header">
+  <button type="button" class="btn btn-dark" (click)="closeModal()">Close</button>
+</div> -->
+<div class="modal-body">
+  <form class="form-user-input">
+    <div class="form-group mb-2">
+      <label for="id">Login Details</label>
+      <div class="input-group">
+        <input type="text" id="id-user" class="form-control" name="userId" placeholder="Enter user id"
+          [(ngModel)]="userId">
+        <input type="password" id="id-pwd" class="form-control" name="password" placeholder="Enter password"
+          [(ngModel)]="password">
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-warning" (click)="onSubmit()">Submit</button>
+</div>

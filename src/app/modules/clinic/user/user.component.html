@@ -1,0 +1,20 @@
+<div *ngFor="let clinic of clinicData" class="clinic-card">
+  <h3><b>Clinic Name: </b>{{clinic.name}}</h3>
+  <h5><b>Address: </b>{{clinic.address}}</h5>
+  <div *ngFor="let doctor of clinic.doctors" class="doctor-card">
+    <div>
+      <i class="fas fa-user"></i>&nbsp;&nbsp;{{doctor.name}}
+      <span class="appointment-segment">
+        <span>Rate: ₹ {{getDoctorRate(doctor.id)}}</span>
+        <span class="booking-segment">
+          <span *ngIf="getAvailableTime(doctor.id) !== 0">
+            <button class="btn btn-primary" (click)="bookAppointment(doctor.id)">Book Appointment</button>
+          </span>
+          <span *ngIf="getAvailableTime(doctor.id) === 0" class="text-danger">
+            No appointments available
+          </span>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>

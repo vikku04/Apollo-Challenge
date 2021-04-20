@@ -1,0 +1,20 @@
+.clinic-card {
+  border: .2em solid black;
+  border-radius: 1em;
+  margin: 1em;
+
+  .doctor-card {
+    border: .1em solid black;
+    border-radius: 1em;
+    margin: 1em;
+
+    .appointment-segment {
+      margin-left: 40%;
+      padding-right: .2em;
+
+      .booking-segment {
+        margin-left: 30%;
+      }
+    }
+  }
+}
